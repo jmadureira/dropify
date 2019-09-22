@@ -74,9 +74,9 @@ gulp.task('scripts', function() {
 });
 
 
-gulp.task('default', ['sass', 'scripts', 'fonts'], function() {
+gulp.task('default', gulp.series(['sass', 'scripts', 'fonts']), function() {
     gulp.watch(jsDir + '**/*.js', ['scripts']);
     gulp.watch(sassDir + '**/*.scss', ['sass']);
 });
 
-gulp.task('build', ['sass', 'scripts', 'fonts']);
+gulp.task('build', gulp.series(['sass', 'scripts', 'fonts']));
