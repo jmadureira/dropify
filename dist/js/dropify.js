@@ -402,7 +402,7 @@ Dropify.prototype.isTouchDevice = function()
  */
 Dropify.prototype.getFileType = function()
 {
-    return this.file.name.split('.').pop().toLowerCase();
+    return this.file.name.split('.').pop().split(/\#|\?/).shift().toLowerCase();
 };
 
 /**
