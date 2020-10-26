@@ -13,8 +13,8 @@
     "url": "https://github.com/JeremyFagis/dropify/issues"
   },
   "main": "dist/js/dropify.js",
-  "dependencies": {
-    "jquery": "*"
+  "peerDependencies": {
+    "jquery": ">= 1.7"
   },
   "devDependencies": {
     "gulp": "^4.0.0",
